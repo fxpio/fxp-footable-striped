@@ -8,9 +8,7 @@
   "main": "js/footable-striped.js",
   "keywords": [
     "footable",
-    "responsive",
-    "auto hide",
-    "column"
+    "striped"
   ],
   "license": "MIT",
   "homepage": "https://github.com/sonatra/sonatra-footable-striped",
