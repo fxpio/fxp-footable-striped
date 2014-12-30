@@ -19,7 +19,7 @@ Add library in your `bower.json`:
 ```json
 {
     "dependencies": {
-        "sonatra-footable-striped: "latest"
+        "sonatra-footable-striped": "latest"
     }
 }
 ```
