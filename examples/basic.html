@@ -84,6 +84,9 @@
             'footable': '../bower_components/footable/js/footable',
             'sonatra-footable-striped': '../js/footable-striped'
         },
+        shim: {
+            'footable': ['jquery']
+        },
         deps: ['sonatra-footable-striped'],
         callback: function () {
             $( '#table-id' ).footable({striped: {enabled: true}});
