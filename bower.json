@@ -13,12 +13,12 @@
   "license": "MIT",
   "homepage": "https://github.com/sonatra/sonatra-footable-striped",
   "dependencies": {
-    "footable": "2.0.*",
-    "jquery": ">=1.11.0"
+    "footable": "^2.0.0",
+    "jquery": "^2.1.0"
   },
   "devDependencies": {
     "requirejs": "~2",
-    "bootstrap": ">=3.0"
+    "bootstrap": "3.*"
   },
   "ignore": [
     "examples",
