@@ -81,13 +81,13 @@
     var require = {
         paths: {
             'jquery': '../bower_components/jquery/dist/jquery',
-            'footable': '../bower_components/footable/js/footable',
-            'sonatra-footable-striped': '../js/footable-striped'
+            'footable': '../bower_components/footable',
+            'sonatra-footable-striped': '..'
         },
         shim: {
-            'footable': ['jquery']
+            'footable/js/footable': ['jquery']
         },
-        deps: ['sonatra-footable-striped'],
+        deps: ['sonatra-footable-striped/js/footable-striped'],
         callback: function () {
             $( '#table-id' ).footable({striped: {enabled: true}});
         }
