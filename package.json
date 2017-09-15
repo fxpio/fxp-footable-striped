@@ -15,7 +15,7 @@
     "url": "https://github.com/sonatra/sonatra-footable-striped.git"
   },
   "bugs": {
-    "url" : "https://github.com/sonatra/sonatra-footable-striped/issues"
+    "url": "https://github.com/sonatra/sonatra-footable-striped/issues"
   },
   "engines": {},
   "main": "js/footable-striped.js",
