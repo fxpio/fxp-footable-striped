@@ -13,7 +13,7 @@ Installation
 ------------
 
 ```
-npm install @sonatra/footable-striped --save
+npm install @fxp/footable-striped --save
 ```
 
 Dev installation

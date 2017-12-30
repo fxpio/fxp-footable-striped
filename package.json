@@ -1,21 +1,21 @@
 {
-  "name": "@sonatra/footable-striped",
+  "name": "@fxp/footable-striped",
   "version": "1.0.0",
   "license": "MIT",
-  "author": "François Pluchino <francois.pluchino@sonatra.com>",
+  "author": "François Pluchino <francois.pluchino@gmail.com>",
   "contributors": [],
   "description": "A striped plugin for Footable",
   "keywords": [
     "footable",
     "striped"
   ],
-  "homepage": "https://github.com/sonatra/sonatra-footable-striped",
+  "homepage": "https://github.com/fxpio/fxp-footable-striped",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sonatra/sonatra-footable-striped.git"
+    "url": "https://github.com/fxpio/fxp-footable-striped.git"
   },
   "bugs": {
-    "url": "https://github.com/sonatra/sonatra-footable-striped/issues"
+    "url": "https://github.com/fxpio/fxp-footable-striped/issues"
   },
   "engines": {},
   "main": "js/footable-striped.js",
