@@ -7,112 +7,45 @@
  * file that was distributed with this source code.
  */
 
-/*global define*/
-/*global jQuery*/
-/*global window*/
-/*global Footable*/
-/*global Striped*/
+import {stripingTable} from "./utils/events";
+import $ from "jquery";
+import 'footable/js/footable';
 
 /**
- * @name Event
- * @property {Footable} ft
+ * Footable Striped class.
  */
-
-/**
- * @param {jQuery} $
- *
- * @typedef {object}  define.amd
- * @typedef {Striped} Striped
- */
-(function (factory) {
-    'use strict';
-
-    if (typeof define === 'function' && define.amd) {
-        // AMD. Register as an anonymous module.
-        define(['jquery', 'footable/js/footable'], factory);
-    } else {
-        // Browser globals
-        factory(jQuery);
-    }
-}(function ($) {
-    'use strict';
-
-    if (undefined === window.footable) {
-        throw new Error('Please check and make sure footable.js is included in the page and is loaded prior to this script.');
-    }
-
+export default class FootableStriped
+{
     /**
-     * Stripping table.
-     *
-     * @param {Event} event
-     *
-     * @private
+     * Constructor.
      */
-    function stripingTable(event) {
-        var ft = event.ft,
-            rowIndex = 0;
-
-        $(ft.table).find('> tbody > tr:not(.footable-row-detail)').each(function () {
-            var $row = $(this);
-
-            // clean off old classes
-            $row
-                .removeClass(ft.options.classes.striping.even)
-                .removeClass(ft.options.classes.striping.odd);
-
-            if (rowIndex % 2 === 0) {
-                $row.addClass(ft.options.classes.striping.even);
-
-            } else {
-                $row.addClass(ft.options.classes.striping.odd);
-            }
-
-            rowIndex += 1;
-        });
-    }
-
-    /**
-     * Defaults options.
-     *
-     * @type {object}
-     */
-    var defaults = {
-        striped: {
-            enabled: true
-        },
-        classes: {
-            striping: {
-                odd:  'footable-odd',
-                even: 'footable-even'
-            }
-        }
-    };
-
-    // FOOTABLE STRIPED CLASS DEFINITION
-    // =================================
-
-    /**
-     * @constructor
-     *
-     * @this Striped
-     */
-    function Striped() {
+    constructor() {
         this.name = "Fxp Footable Striped";
-        this.init = function (ft) {
-            if (!ft.options.striped.enabled) {
-                return;
-            }
-
-            var eventType = 'footable_initialized.striped footable_row_removed.striped footable_redrawn.striped footable_sorted.striped footable_filtered.striped';
-
-            $(ft.table).on(eventType, stripingTable);
-        };
     }
 
+    /**
+     *
+     * @param {footable} ft
+     */
+    init(ft) {
+        if (!ft.options.striped.enabled) {
+            return;
+        }
 
-    // FOOTABLE STRIPED PLUGIN DEFINITION
-    // ==================================
+        let eventType = 'footable_initialized.striped footable_row_removed.striped footable_redrawn.striped footable_sorted.striped footable_filtered.striped';
 
-    window.footable.plugins.register(Striped, defaults);
+        $(ft.table).on(eventType, stripingTable);
+    }
+}
 
-}));
+window.footable.plugins.register(FootableStriped, {
+    striped: {
+        enabled: true
+    },
+    classes: {
+        striping: {
+            odd:  'footable-odd',
+            even: 'footable-even'
+        }
+    }
+});
