@@ -26,7 +26,7 @@
   "main": "js/footable-striped.js",
   "dependencies": {
     "jquery": "^2.2.0||^3.2.0",
-    "footable": "github:fooplugins/FooTable#^2.0.3"
+    "footable": "github:fooplugins/FooTable#semver:^2.0.3"
   },
   "devDependencies": {
     "@symfony/webpack-encore": "^0.23.0",
